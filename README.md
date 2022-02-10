@@ -1,14 +1,16 @@
 # Clarke Challenge
 
-Nesta aplicação, está todo o sistema de Marketplace para a Clarke. 
+Nesta aplicação, está todo o sistema de Marketplace para a Clarke. Sinto muito não ter terminado, mas eu me diverti muito fazendo. Eu aprendi bastante coisa sobre front e pretendo aprender mais. (Mas o Back ainda é melhor!).
 
-Esta aplicação informa ao usuário logado as empresas que atemdem a demanda de energia baseada em quanto este gasta.
+Eu agradeço de verdade a chance de provar pra mim mesmo que eu consigo.
 
-Abaixo, terão todos os endpoints e funcionalidades do Back-End.
+Esta aplicação informa ao usuário logado as empresas que atendem a demanda de energia baseada em quanto este gasta. Ou deveria. Infelizmente, não consegui utilizar a parte das rotas, pelo menos não as autenticadas. Mas ainda assim, o back está funcionando bem.
 
-Um schema para a criação do Banco de Dados está no projeto
+Abaixo, terão todos os endpoints e funcionalidades(Que eu pretendia implementar) do Back-End.
 
-A url base dessa API é "http://localhost:3000", para executar use o comando "npm run dev" na pasta "api" E o comando "npm start" na pasta "marketplace"
+Um schema para a criação do Banco de Dados está no projeto(Serve mais para os fornecedores do que para os clientes)
+
+A url base dessa API é "http://localhost:6661", para executar use o comando "npm run dev" na pasta "api" E o comando "npm start" na pasta "clarke-frontend"
 
 ---
 
@@ -54,4 +56,4 @@ Requisitos:
     
 ---
 
-                                Jonatas Ximenez Silva
+                                Jonatas Ximenez Silva - 'Por Frodo.'
