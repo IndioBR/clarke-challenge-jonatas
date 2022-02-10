@@ -17,7 +17,7 @@ async function login(req, res) {
 
         if (!verificarSenha) return res.status(400).json('mensagem: Email/Senha inválido');
 
-        const token = jwt.sign({ id: usuario.id }, segredo, {expiresIn: '1d'});
+        const token = jwt.sign({ id: usuario.id, nome: usuario.nome }, segredo, {expiresIn: '1d'});
 
         return res.status(200).json(token);
     } catch (error) {
@@ -49,7 +49,21 @@ async function cadastrarCliente(req, res) {
     }
 }
 
+async function detalharUsuario(req, res) {
+    const { usuario } = req;
+    try {
+        const query = 'select * from clientes where id = $1';
+        const {rowCount, rows} = await conexao.query(query, [usuario.id])
+        if (rowCount === 0) return res.status(404).json("mensagem: Não encontrado");
+
+        return res.status(200).json(rows);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 module.exports = {
     login,
-    cadastrarCliente
+    cadastrarCliente,
+    detalharUsuario
 };

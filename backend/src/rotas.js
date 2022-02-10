@@ -1,10 +1,10 @@
 const express = require('express');
 const {
     login,
-    cadastrarCliente
+    cadastrarCliente,
+    detalharUsuario
 } = require('./controladores/usuarios');
 const {
-    listarFornecedores,
     procurarFornecedor
 } = require('./controladores/fornecedores');
 const { 
@@ -18,12 +18,10 @@ const rotas = express();
 
 rotas.use(express.json());
 
-// Usuário
-rotas.post('/cliente', nome, email, senha, cadastrarCliente);
+rotas.post('/cadastro', nome, email, senha, cadastrarCliente);
 rotas.post('/login', email, senha, login);
 
-// Produtos
-rotas.get('/inicio', token, listarFornecedores);
-rotas.post('/search', token, procurarFornecedor)
+rotas.post('/search', procurarFornecedor);
+rotas.get('/', detalharUsuario)
 
 module.exports = rotas;
